@@ -1,7 +1,7 @@
 # yaml-language-server: $schema=https://squidfunk.github.io/mkdocs-material/schema.json
 
 site_name: SAPstar Network Homelab
-# copyright: Copyright &copy; 2022 - 2023 SAPstar Network
+copyright: Copyright &copy; 2022 - 2023 Daniel Hagyarossy
 repo_url: https://github.com/atraides/homelab
 repo_name: atraides/homelab
 
@@ -37,6 +37,11 @@ plugins:
 theme:
   name: material
   logo: /assets/ssnw-logo.png
+  favicon: /assets/favicon.ico
+
+  # icon:
+  #   edit: material/pencil
+  #   view: material/eye
 
   # Font settings
   # font:
@@ -57,7 +62,7 @@ theme:
     - media: "(prefers-color-scheme: light)"
       scheme: default
       primary: black
-      accent: lime
+      accent: light blue
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
@@ -66,7 +71,7 @@ theme:
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       primary: black
-      accent: lime
+      accent: light blue
       toggle:
         icon: material/brightness-4
         name: Switch to system preference
@@ -74,6 +79,8 @@ theme:
   features:
     - header.autohide
     - content.code.copy
+    - content.action.edit
+
 extra:
   generator: true
 markdown_extensions:
@@ -102,3 +109,49 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
+
+nav:
+  - Home: index.md
+  # - Installation:
+  #   - installation/index.md
+  #   - installation/sandbox.md
+  #   - Production:
+  #     - installation/production/index.md
+  #     - installation/production/prerequisites.md
+  #     - installation/production/external-resources.md
+  #     - installation/production/configuration.md
+  #     - installation/production/deployment.md
+  #   - installation/post-installation.md
+  # - Getting started:
+  #   - getting-started/index.md
+  #   - getting-started/user-onboarding.md
+  #   - getting-started/install-pre-commit-hooks.md
+  # - Concepts:
+  #   - concepts/index.md
+  #   - concepts/pxe-boot.md
+  #   - concepts/secrets-management.md
+  #   - concepts/certificate-management.md
+  #   - concepts/tools-container.md
+  #   - concepts/testing.md
+  - Guides:
+      - guides/semantic-release.md
+    # - Troubleshooting:
+    #   - how-to-guides/troubleshooting/index.md
+    #   - how-to-guides/troubleshooting/argocd.md
+    #   - how-to-guides/troubleshooting/cert-manager.md
+    #   - how-to-guides/troubleshooting/gitea.md
+    #   - how-to-guides/troubleshooting/longhorn.md
+    #   - how-to-guides/troubleshooting/pxe-boot.md
+    #   - how-to-guides/troubleshooting/vault.md
+  # - Reference:
+  #     - reference/index.md
+  # - Architecture:
+  #   - reference/architecture/index.md
+  #   - reference/architecture/overview.md
+  #   - reference/architecture/networking.md
+  #   - reference/architecture/decision-records.md
+  # - reference/license.md
+  # - reference/changelog.md
+  # - reference/roadmap.md
+  # - reference/contributing.md
+  # - reference/faq.md

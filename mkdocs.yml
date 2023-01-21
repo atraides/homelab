@@ -27,7 +27,7 @@ plugins:
       auto_caption: false
       caption_position: bottom
   - git-revision-date-localized:
-      type: date
+      type: timeago
       enable_creation_date: true
   - git-committers:
       repository: atraides/homelab

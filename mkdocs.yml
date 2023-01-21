@@ -75,7 +75,7 @@ theme:
     - header.autohide
     - content.code.copy
 extra:
-  generator: false
+  generator: true
 markdown_extensions:
   - abbr
   - admonition

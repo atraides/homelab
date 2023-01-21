@@ -6,10 +6,11 @@ repo_url: https://github.com/atraides/homelab
 repo_name: atraides/homelab
 
 extra_css:
-  - /static/css/asciinema-player.css
+  - /assets/css/asciinema-player.css
+  - /assets/css/extra.css
 
 extra_javascript:
-  - /static/js/asciinema-player.min.js
+  - /assets/js/asciinema-player.min.js
 
 plugins:
   - glightbox:
@@ -35,11 +36,12 @@ plugins:
 
 theme:
   name: material
+  logo: /assets/ssnw-logo.png
 
   # Font settings
-  font:
-    text: "Roboto Condensed"
-    code: "Roboto Mono"
+  # font:
+  #   text: "Roboto Condensed"
+  #   code: "Roboto Mono"
 
   # Reading direction left-to-right
   direction: ltr
@@ -54,8 +56,8 @@ theme:
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: blue grey
-      accent: teal
+      primary: black
+      accent: lime
       toggle:
         icon: material/brightness-7
         name: Switch to dark mode
@@ -63,8 +65,8 @@ theme:
     # Palette toggle for dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: blue grey
-      accent: teal
+      primary: black
+      accent: lime
       toggle:
         icon: material/brightness-4
         name: Switch to system preference

@@ -1,7 +1,7 @@
 # SAPstar Network Homelab
 
 [![license](https://img.shields.io/github/license/atraides/homelab?style=flat&logo=gnu&logoColor=white)](https://www.gnu.org/licenses/gpl-3.0.html)
-[![release](https://img.shields.io/github/v/release/atraides/homelab?sort=semver)](https://github.com/atraides/homelab/tags)
+[![release](https://img.shields.io/github/v/tag/atraides/homelab?sort=semver)](https://github.com/atraides/homelab/tags)
 [![semantic-release: angular](https://img.shields.io/badge/semantic--release-angular-e10079?logo=semantic-release)](https://github.com/semantic-release/semantic-release)
 [![documentation](https://img.shields.io/website?down_color=lightgray&down_message=offline&label=docs&logo=gitbook&logoColor=white&up_message=up&url=https%3A%2F%2Fdocs.sapstar.eu)](https://docs.sapstar.eu)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)

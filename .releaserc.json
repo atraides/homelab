@@ -1,7 +1,7 @@
 {
   "repositoryUrl": "https://github.com/atraides/homelab.git",
   "tagFormat": "v${version}",
-  "branches": ["master", "main", "feature-sapstar"],
+  "branches": ["master", "main"],
   "plugins": [
     "@semantic-release/commit-analyzer",
     [

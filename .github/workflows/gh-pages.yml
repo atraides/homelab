@@ -15,7 +15,8 @@ jobs:
       - uses: actions/setup-python@v4
         with:
           python-version: 3.x
-      - run: pip install git+https://${MKDOCS_TOKEN}@github.com/squidfunk/mkdocs-material-insiders.git
+      - run: pip install git+https://__token__:${MKDOCS_TOKEN}@github.com/squidfunk/mkdocs-material-insiders.git
+      - run: pip install mkdocs-glightbox mkdocs-git-revision-date-localized-plugin mkdocs-git-committers-plugin-2 mkdocs-git-authors-plugin
       - run: mkdocs gh-deploy --force
 env:
   MKDOCS_TOKEN: ${{ secrets.MKDOCS_TOKEN }}

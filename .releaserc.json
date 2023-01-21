@@ -1,0 +1,32 @@
+{
+  "repositoryUrl": "https://github.com/atraides/homelab.git",
+  "tagFormat": "v${version}",
+  "branches": ["master", "main", "feature-sapstar"],
+  "plugins": [
+    "@semantic-release/commit-analyzer",
+    [
+      "@semantic-release/release-notes-generator",
+      {
+        "preset": "conventionalcommits",
+        "presetConfig": {
+          "commitUrlFormat": "https://github.com/atraides/homelab/commit/{{hash}}",
+          "compareUrlFormat": "https://github.com/atraides/homelab/compare/{{previousTag}}...{{currentTag}}"
+        }
+      }
+    ],
+    [
+      "@semantic-release/changelog",
+      {
+        "changelogFile": "CHANGELOG.md",
+        "changelogTitle": "# Changelog"
+      }
+    ],
+    [
+      "@semantic-release/git",
+      {
+        "assets": ["CHANGELOG.md"],
+        "message": "fix(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+      }
+    ]
+  ]
+}

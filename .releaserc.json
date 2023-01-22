@@ -27,8 +27,8 @@
         "replacements": [
           {
             "files": ["README.md"],
-            "from": "[github-release]: .*",
-            "to": "[github-release]: https://github.com/atraides/homelab/releases/tag/${nextRelease.version}",
+            "from": "\\[github-release\\]: .*",
+            "to": "[github-release]: https://github.com/atraides/homelab/releases/tag/v${nextRelease.version}",
             "results": [
               {
                 "file": "README.md",

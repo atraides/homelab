@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.2](https://github.com/atraides/homelab/compare/v0.1.1...v0.1.2) (2023-01-22)
+
+
+### Bug Fixes
+
+* **semrel:** incorrect replace string for README.md ([ffb03f8](https://github.com/atraides/homelab/commit/ffb03f82a7bce58e23c0328cbf541d589500885c))
+
 ## [0.1.1](https://github.com/atraides/homelab/compare/v0.1.0...v0.1.1) (2023-01-22)
 
 

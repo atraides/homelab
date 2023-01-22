@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.1](https://github.com/atraides/homelab/compare/v0.1.0...v0.1.1) (2023-01-22)
+
+
+### Bug Fixes
+
+* **semrel:** use a dynamic version link badge with semantic-release-replace-plugin ([b2297ce](https://github.com/atraides/homelab/commit/b2297cec594d148529de2178468397a81b42bed1))
+
 ## [0.1.0](https://github.com/atraides/homelab/compare/v0.0.1...v0.1.0) (2023-01-21)
 
 

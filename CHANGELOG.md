@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.3](https://github.com/atraides/homelab/compare/v0.1.2...v0.1.3) (2023-07-19)
+
+
+### Bug Fixes
+
+* **packages:** update npm packages to fix security issues ([26389ec](https://github.com/atraides/homelab/commit/26389ec20d70b5d3f571678d3fab3853c7288df0))
+
 ## [0.1.2](https://github.com/atraides/homelab/compare/v0.1.1...v0.1.2) (2023-01-22)
 
 

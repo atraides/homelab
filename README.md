@@ -3,7 +3,7 @@
 [![license](https://img.shields.io/github/license/atraides/homelab?style=flat&logo=gnu&logoColor=white)][webpage-license]
 [![release](https://img.shields.io/github/v/tag/atraides/homelab?sort=semver&label=release&logo=semver&logoColor=white)][github-release]
 [![build-status](https://img.shields.io/github/actions/workflow/status/atraides/homelab/gh-pages.yml?event=push&logo=GitHub%20Actions&logoColor=white)][github-build]
-[![semantic-release: angular](https://img.shields.io/badge/semantic--release-angular-e10079?logo=semantic-release)][webpage-semantic-release]
+[![semantic-version: 2.0.0](https://img.shields.io/badge/semver-2.0.0-e10079?logo=semantic-release)][webpage-semantic-release]
 [![documentation](https://img.shields.io/website?down_color=lightgray&down_message=offline&label=docs&logo=gitbook&logoColor=white&up_message=up&url=https%3A%2F%2Fdocs.sapstar.eu)][webpage-sapstar]
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)][webpage-cz-cli]
 [![stars](https://img.shields.io/github/stars/atraides/homelab?logo=github&logoColor=white&color=gold&style=flat)][github-repo]
@@ -25,7 +25,7 @@ This project was created to automate provisioning, operating and updating self-h
 [webpage-cz-cli]: https://commitizen.github.io/cz-cli/
 [webpage-license]: https://choosealicense.com/licenses/gpl-3.0/
 [webpage-sapstar]: https://docs.sapstar.eu
-[webpage-semantic-release]: https://github.com/semantic-release/semantic-release
+[webpage-semantic-release]: https://semver.org/spec/v2.0.0.html
 [wiki-gitops]: https://www.weave.works/technologies/gitops
 [wiki-homelab]: https://www.reddit.com/r/homelab/wiki/introduction
 [wiki-iac]: https://en.wikipedia.org/wiki/Infrastructure_as_code

@@ -1,7 +1,7 @@
 # yaml-language-server: $schema=https://squidfunk.github.io/mkdocs-material/schema.json
 
 site_name: SAPstar Network Homelab
-copyright: Copyright &copy; 2022 - 2023 Daniel Hagyarossy
+copyright: Copyright &copy; 2022 - 2025 Daniel Hagyarossy
 repo_url: https://github.com/atraides/homelab
 repo_name: atraides/homelab
 

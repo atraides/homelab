@@ -1,7 +1,11 @@
 [tool.commitizen]
+bump_message = "release $current_version → $new_version [skip-ci]"
 name = "cz_conventional_commits"
 tag_format = "v$version"
 version_scheme = "semver"
 version = "0.3.0"
+version_files = [
+    "README.md:github-release"
+]
 update_changelog_on_bump = true
 major_version_zero = true

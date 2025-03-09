@@ -1,5 +1,11 @@
 # Changelog
 
+## v0.3.2 (2025-03-09)
+
+### Fix
+
+- **docs**: Replace the emoji section with the new integrated one
+
 ## v0.3.1 (2025-03-09)
 
 ### Fix

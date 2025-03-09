@@ -1,10 +1,58 @@
-# How to setup the desktop
+# How to setup the Development Desktop (Ubuntu 24.04)
 
-```
+## Install the required tools
+
+### Nala
+
+!!! note
+
+    On older Ubuntu/Debian version the `nala` package is not always available.
+    In these cases the [following guide][nala-install-guide] can be used to install `nala`.
+
+#### Install the nala front-end
+``` shell
 sudo apt install nala
 sudo nala upgrade
-gpg --import /media/atraides/20380fc2-0fb8-4511-8076-abcf210e5f31/*.asc
-export KEYID=7869009790BB9080
+```
+
+#### Configure to use the fastest mirror
+``` shell
+sudo nala fetch
+```
+
+### cURL
+
+In certain Ubuntu installations cURL is not available. Since this guide uses cURL extensively,
+we have to make sure it is installed first.
+
+``` shell
+sudo nala install curl
+```
+
+### Install internal Root CA certficate
+
+!!! note
+    If you don't use an internal root certificates skip this step.
+
+``` shell
+sudo nala install -y ca-certificates
+sudo curl -skSL https://<url of the root cert> -o /usr/local/share/ca-certificates/<your root ca.pem.crt
+sudo update-ca-certificates
+```
+
+### GnuPG
+
+#### Install the required packages
+``` shell
+sudo nala install -y gnupg gnupg-agent scdaemon pcscd
+```
+
+#### Import the private keys
+``` shell
+curl -sSL https://<url hosting the keys> | gpg --import 
+
+# Set the ${KEYID} to your key's id
+export KEYID=<your key id>
 gpg --command-fd=0 --pinentry-mode=loopback --edit-key "$KEYID" <<EOF
 uid *
 trust
@@ -12,168 +60,91 @@ trust
 y
 save
 EOF
-gpg -k
-cd
-cp /media/atraides/20380fc2-0fb8-4511-8076-abcf210e5f31/*.asc ./
-ls -ltr
-umount /media/atraides/20380fc2-0fb8-4511-8076-abcf210e5f31 
-ssh-add -L
-gpg -k
+```
+
+### YubiKey
+
+#### Check the key status
+
+Before we can use the YubiKey we have to make sure it is accessible. Connect the key to the machine and run the following command. This should show some basic information about your YubiKey card.
+
+``` shell
 gpg --card-status
+```
+
+``` shell
+❯ gpg --card-status
+Reader ...........: Yubico YubiKey FIDO CCID 00 00
+Application ID ...: D276##################################
+Application type .: OpenPGP
+Version ..........: 3.4
+Manufacturer .....: Yubico
+Serial number ....: 1########
+Name of cardholder: [not set]
+Language prefs ...: [not set]
+Salutation .......: 
+URL of public key : [not set]
+[...]
+General key info..: sub  ed25519/#################################
+❯ 
+```
+
+If the above command didn't work try creating the following file before retrying.
+
+``` shell
 cd ~/.gnupg
 touch scdaemon.conf
 echo "disable-ccid" >>scdaemon.conf
-sudo nala fetch
-sudo nala install -y gnupg gnupg-agent scdaemon pcscd
 gpg --card-status
-echo -e "\ntest message string" |   gpg --encrypt --armor       --recipient $KEYID --output encrypted.txt
-ls -ltr
-file encrypted.txt 
-rm encrypted.txt 
-cd
-echo -e "\ntest message string" |   gpg --encrypt --armor       --recipient $KEYID --output encrypted.txt
-gpg --decrypt --armor encrypted.txt
-rm encrypted.txt 
-ls -ltr
-ssh-add -L
-echo "test message string" | gpg --armor --clearsign > signed.txt
-gpg --verify signed.txt
-rm signed.txt 
-cd ~/.gnupg
-wget https://raw.githubusercontent.com/drduh/config/master/gpg-agent.conf
-vi gpg-agent.conf 
-gpg-connect-agent /bye
-vi ~/.bashrc 
-ssh-add -L
-sudo nala install -y ca-certificates
-sudo cp Downloads/ssnw-root.pem.crt /usr/local/share/ca-certificates
-sudo update-ca-certificates
-cat ~/7869009790BB9080-2025-03-08.asc 
-sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply atraides
-sudo nala install curl
-sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply atraides
-rm -rf ~/.local/share/chezmoi/
-sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply atraides
-ls -ltra
-sudo nala install zsh
-chsh
-sudo nala install starship
-curl -sS https://starship.rs/install.sh | sh
-zsh
-chezmoi update -rv
-chezmoi update -Rv
-sudo nala install git
-chezmoi update -Rv
-nitch
-cat ~/.zshrc
-k get
-chezmoi edit ~/.zshrc
-which starship
-sudo rm /usr/local/bin/starship 
-zsh
-history
-mkdir develop
-cd develop/
-git clone git@github.com:atraides/homelab.git ssnw-docs
 ```
 
+### Use GPG for SSH keys
+
+#### Download the agent config template
+``` shell
+cd ~/.gnupg
+curl -sSLO https://raw.githubusercontent.com/drduh/config/master/gpg-agent.conf
+gpg-connect-agent /bye
 ```
+
+#### Replace agents
+
+In order to use the GPG connect agent to use with SSH add the following lines to you `rc` file:
+
+``` shell
+cat >> ~/.bashrc <<EOF
+export GPG_TTY="\$(tty)"
+export SSH_AUTH_SOCK=\$(gpgconf --list-dirs agent-ssh-socket)
+gpgconf --launch gpg-agent
+<<EOF
+```
+
+### Chezmoi
+
+``` shell
+sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply ${GITHUB_USERNAME}
+sudo nala install zsh
 chsh
-which zsh
-chsh /usr/bin/zsh
-sudo chsh atraides  /usr/bin/zsh
-sudo chsh atraides
-history
-bash
-cd ~/.local/share/
-cd chezmoi
-ls -ltr
-cd ..
-rm -rf chezmoi
-git clone git@github.com:atraides/dotfiles.git chezmoi
-ssh-add -L
-export GPG_TTY=$(tty)\nexport SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)\ngpgconf --launch gpg-agent\ngpg-connect-agent updatestartuptty /bye > /dev/null
-ssh-add -L
-git clone git@github.com:atraides/dotfiles.git chezmoi
-cd
-chezmoi edit ~/.zshrc
-vi ~/.gitconfig
-gpg -k
-chezmoi update
-chezmoi edit ~/.zshrc
-chezmoi update
-ssh-add -L
-chezmoi add ~/.gnupg/gpg.conf
-chezmoi add ~/.gnupg/gpg-agent.conf
-gpg -k
-sudo nala install install dconf-cli uuid-runtime
+```
+
+### Gogh - Terminal Color schemes
+
+``` shell
 sudo nala install dconf-cli uuid-runtime
 bash -c "$(wget -qO- https://git.io/vQgMr)"
-ls -ltr
-clear
-gpg -k
-export KEYID=7869009790BB9080
-gpg --keyserver keys.gnupg.net --send-key $KEYID
-gpg --send-key $KEYID | curl -T - https://keys.openpgp.org
-gpg --card-edit
-sudo cp -avir /media/atraides/20380fc2-0fb8-4511-8076-abcf210e5f31/.password-store ~/
-umount /media/atraides/20380fc2-0fb8-4511-8076-abcf210e5f31 
-pass
-sudo nala install pass
-pass
-pass PGP/Yubikey/Work/Admin\ PIN
-ls -ltr ~/.password-store
-find ~/.password-store/
-find ~/.password-store/ -ls
-pass PGP/YubiKey/Master
-pass PGP/YubiKey/Master/Admin\ PIN
-gpg --card-edit
-clear
-pyenv 
-pyenv list
-pyenv versions
-pyenv install
-pyenv install -l
-pyenv install 3.12.7
-sudo nala install -y make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev python-openssl git
-sudo nala install -y make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev git
-sudo apt purge libncurses5
-pyenv install 3.12.7
-bash
-pyenv global 3.12.7
-sudo nala upgrade
-cd develop/ssnw-docs/docs/guides
-lazygit
-cd
-curl -LO https://github.com/jesseduffield/lazygit/releases/download/v0.48.0/lazygit_0.48.0_Linux_x86_64.tar.gz
-rm lazygit_0.48.0_Linux_arm64.tar.gz
-ls -ltr
-rm README.md LICENSE
-cd bin
-tar -zxvf ../lazygit_0.48.0_Linux_x86_64.tar.gz
-rm LICENSE README.md
-ls -ltr
-cd develop/ssnw-docs/docs/guides
-lazygit
+```
+
+### Install Commitizen
+
+``` shell
 sudo nala install pipx
 pipx ensurepath
-sudo pipx ensurepath --global # optional to allow pipx actions with --global argument\n
-sudo pipx ensurepath --global
-sudo pipx ensurepath 
-pipx ensurepath 
-pipx install commitizen
-cd develop/ssnw-docs/docs/
-cd ..
-vi .github/workflows/gh-pages.yml
-cz
-cz init
-cz
-cz c
-ga
-gaa
-cz
-cz c
-cz bump
-cz push
-gpsup
 ```
+
+At this point logout and log back in to make sure the variables are working.
+
+``` shell
+pipx install commitizen
+```
+
+[nala-install-guide]: https://gitlab.com/volian/nala/-/wikis/Installation

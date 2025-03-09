@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.4](https://github.com/atraides/homelab/compare/v0.1.3...v0.1.4) (2025-03-09)
+
+
+### Bug Fixes
+
+* **guide:** Add new guide for the Mainsail setup on raspberry ([11ffab9](https://github.com/atraides/homelab/commit/11ffab9c7113ef4f5971060eb750c9918d0b56f5))
+
 ## [0.1.3](https://github.com/atraides/homelab/compare/v0.1.2...v0.1.3) (2023-07-19)
 
 

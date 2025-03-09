@@ -1,5 +1,14 @@
 # Changelog
 
+## v0.3.4 (2025-03-09)
+
+### Fix
+
+- **docs**: Add initial setup guide for development desktop
+- **conf**: Update syntax highlight config to the latest version
+- **conf**: Remove css and json files for asciinema
+- **docs**: Correct image links to use relative path
+
 ## v0.3.3 (2025-03-09)
 
 ### Fix

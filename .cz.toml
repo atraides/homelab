@@ -3,7 +3,7 @@ bump_message = "bump: Release $current_version → $new_version [skip ci]"
 name = "cz_conventional_commits"
 tag_format = "v$version"
 version_scheme = "semver"
-version = "0.3.3"
+version = "0.3.4"
 version_files = [
     "README.md:github-release"
 ]

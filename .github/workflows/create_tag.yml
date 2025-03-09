@@ -23,9 +23,9 @@ jobs:
           github_token: ${{ secrets.RELEASE_TOKEN }}
           changelog_increment_filename: release.md
       - name: Release
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v2
+        if: startsWith(github.ref, 'refs/tags/')
         with:
           body_path: "release.md"
-          tag_name: ${{ env.REVISION }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

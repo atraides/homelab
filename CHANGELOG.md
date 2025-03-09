@@ -1,26 +1,5 @@
 # Changelog
 
-## [0.1.6](https://github.com/atraides/homelab/compare/v0.1.5...v0.1.6) (2025-03-09)
-
-
-### Bug Fixes
-
-* **docs:** Remove some unnecessary commands from the history ([518a79e](https://github.com/atraides/homelab/commit/518a79e437a74f204cff9e4ba3f70b4edc79c41d))
-
-## [0.1.5](https://github.com/atraides/homelab/compare/v0.1.4...v0.1.5) (2025-03-09)
-
-
-### Bug Fixes
-
-* **docs:** Add links to the two new documentation ([26cbba1](https://github.com/atraides/homelab/commit/26cbba1ff97aa3ad3b98854b34e43b426f4c0f38))
-
-## [0.1.4](https://github.com/atraides/homelab/compare/v0.1.3...v0.1.4) (2025-03-09)
-
-
-### Bug Fixes
-
-* **guide:** Add new guide for the Mainsail setup on raspberry ([11ffab9](https://github.com/atraides/homelab/commit/11ffab9c7113ef4f5971060eb750c9918d0b56f5))
-
 ## [0.1.3](https://github.com/atraides/homelab/compare/v0.1.2...v0.1.3) (2023-07-19)
 
 

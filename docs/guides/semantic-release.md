@@ -53,13 +53,13 @@ npm install --save-dev commitizen
 
 Open your [GitHub profile][website-github-profiles] and request a new classic token for Semantic Release with **repo** rights.
 
-![Access for Semantic Release](/assets/images/SemRel-Token-Access.png)
+![Access for Semantic Release](../assets/images/SemRel-Token-Access.png)
 
 Next we have to add this token as a secret to our repository, so we can use it in our CI pipeline. Go to your repository configuration. Select **Secrets and variables** → **Actions** and choose **New Repository secret**. Pick a secret name and upload the generated token.
 
 In this guide we are using `RELEASE_TOKEN` for this purpose.
 
-![Alt text](/assets/images/Repository-Secrets.png)
+![Alt text](../assets/images/Repository-Secrets.png)
 
 !!! Note
     Other plugins might need more secrets to work properly, for example release plugins which push images to docker, PyPI or other repositories. See each plugin's documentation for the environment variables required.

@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.5](https://github.com/atraides/homelab/compare/v0.1.4...v0.1.5) (2025-03-09)
+
+
+### Bug Fixes
+
+* **docs:** Add links to the two new documentation ([26cbba1](https://github.com/atraides/homelab/commit/26cbba1ff97aa3ad3b98854b34e43b426f4c0f38))
+
 ## [0.1.4](https://github.com/atraides/homelab/compare/v0.1.3...v0.1.4) (2025-03-09)
 
 

@@ -1,0 +1,701 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="/assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.7">
+    
+    
+      
+        <title>How to setup the desktop - SAPstar Network Homelab</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8608ea7d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/timeago.css">
+    
+      <link rel="stylesheet" href="/assets/css/asciinema-player.css">
+    
+      <link rel="stylesheet" href="/assets/css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#how-to-setup-the-desktop" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="SAPstar Network Homelab" class="md-header__button md-logo" aria-label="SAPstar Network Homelab" data-md-component="logo">
+      
+  <img src="/assets/ssnw-logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SAPstar Network Homelab
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              How to setup the desktop
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="light-blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="light-blue"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/atraides/homelab" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    atraides/homelab
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="SAPstar Network Homelab" class="md-nav__button md-logo" aria-label="SAPstar Network Homelab" data-md-component="logo">
+      
+  <img src="/assets/ssnw-logo.png" alt="logo">
+
+    </a>
+    SAPstar Network Homelab
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/atraides/homelab" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    atraides/homelab
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Guides
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Guides
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../semantic-release/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Semantic Release
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/atraides/homelab/edit/master/docs/guides/setup-desktop.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+
+
+<h1 id="how-to-setup-the-desktop">How to setup the desktop<a class="headerlink" href="#how-to-setup-the-desktop" title="Permanent link">&para;</a></h1>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>    1  sudo apt install nala
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    2  sudo nala upgrade
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    3  cd $GNUPGHOME
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    4  cd $GNUPGHOME
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    5  wget https://raw.githubusercontent.com/drduh/config/master/gpg.conf
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    6  pwd
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    7  rm gpg.conf 
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    8  echo $GNUPGHOME
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    9  gpg
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>   10  gpg -k
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>   11  echo $GNUPGHOME
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>   12  mkdir ~/.gnupg
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>   13  cd ~/.gnupg/
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>   14  wget https://raw.githubusercontent.com/drduh/config/master/gpg.conf
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>   15  grep -ve &quot;^#&quot; $GNUPGHOME/gpg.conf
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>   16  export GNUPGHOME=~/.gnupg/
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>   17  grep -ve &quot;^#&quot; $GNUPGHOME/gpg.conf
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>   18  gpg --import /media/atraides/20380fc2-0fb8-4511-8076-abcf210e5f31/*.asc
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>   19  gpg -K
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>   20  gpg -k
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>   21  gpg --delete-keys F8AFF395491002AD C145CF402E7AD349 AF294F634C704603
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>   22  gpg -k
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>   23  export KEYID=7869009790BB9080
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>   24  gpg --command-fd=0 --pinentry-mode=loopback --edit-key &quot;$KEYID&quot; &lt;&lt;EOF
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>   25  uid *
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>   26  trust
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>   27  5
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>   28  y
+<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>   29  save
+<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>   30  EOF
+<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>   31  gpg -k
+<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>   32  cd
+<a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a>   33  cp /media/atraides/20380fc2-0fb8-4511-8076-abcf210e5f31/*.asc ./
+<a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>   34  ls -ltr
+<a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a>   35  umount /media/atraides/20380fc2-0fb8-4511-8076-abcf210e5f31 
+<a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a>   36  ssh-add -L
+<a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a>   37  gpg -k
+<a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a>   38  gpg --card-status
+<a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a>   39  cd ~/.gnupg
+<a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a>   40  touch scdaemon.conf
+<a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a>   41  echo &quot;disable-ccid&quot; &gt;&gt;scdaemon.conf
+<a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a>   42  sudo nala fetch
+<a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a>   43  sudo nala install -y gnupg gnupg-agent scdaemon pcscd
+<a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a>   44  gpg --card-status
+<a id="__codelineno-0-45" name="__codelineno-0-45" href="#__codelineno-0-45"></a>   45  echo -e &quot;\ntest message string&quot; |   gpg --encrypt --armor       --recipient $KEYID --output encrypted.txt
+<a id="__codelineno-0-46" name="__codelineno-0-46" href="#__codelineno-0-46"></a>   46  ls -ltr
+<a id="__codelineno-0-47" name="__codelineno-0-47" href="#__codelineno-0-47"></a>   47  file encrypted.txt 
+<a id="__codelineno-0-48" name="__codelineno-0-48" href="#__codelineno-0-48"></a>   48  rm encrypted.txt 
+<a id="__codelineno-0-49" name="__codelineno-0-49" href="#__codelineno-0-49"></a>   49  cd
+<a id="__codelineno-0-50" name="__codelineno-0-50" href="#__codelineno-0-50"></a>   50  echo -e &quot;\ntest message string&quot; |   gpg --encrypt --armor       --recipient $KEYID --output encrypted.txt
+<a id="__codelineno-0-51" name="__codelineno-0-51" href="#__codelineno-0-51"></a>   51  gpg --decrypt --armor encrypted.txt
+<a id="__codelineno-0-52" name="__codelineno-0-52" href="#__codelineno-0-52"></a>   52  rm encrypted.txt 
+<a id="__codelineno-0-53" name="__codelineno-0-53" href="#__codelineno-0-53"></a>   53  ls -ltr
+<a id="__codelineno-0-54" name="__codelineno-0-54" href="#__codelineno-0-54"></a>   54  ssh-add -L
+<a id="__codelineno-0-55" name="__codelineno-0-55" href="#__codelineno-0-55"></a>   55  echo &quot;test message string&quot; | gpg --armor --clearsign &gt; signed.txt
+<a id="__codelineno-0-56" name="__codelineno-0-56" href="#__codelineno-0-56"></a>   56  gpg --verify signed.txt
+<a id="__codelineno-0-57" name="__codelineno-0-57" href="#__codelineno-0-57"></a>   57  rm signed.txt 
+<a id="__codelineno-0-58" name="__codelineno-0-58" href="#__codelineno-0-58"></a>   58  cd ~/.gnupg
+<a id="__codelineno-0-59" name="__codelineno-0-59" href="#__codelineno-0-59"></a>   59  wget https://raw.githubusercontent.com/drduh/config/master/gpg-agent.conf
+<a id="__codelineno-0-60" name="__codelineno-0-60" href="#__codelineno-0-60"></a>   60  vi gpg-agent.conf 
+<a id="__codelineno-0-61" name="__codelineno-0-61" href="#__codelineno-0-61"></a>   61  gpg-connect-agent /bye
+<a id="__codelineno-0-62" name="__codelineno-0-62" href="#__codelineno-0-62"></a>   62  vi ~/.bashrc 
+<a id="__codelineno-0-63" name="__codelineno-0-63" href="#__codelineno-0-63"></a>   63  ssh-add -L
+<a id="__codelineno-0-64" name="__codelineno-0-64" href="#__codelineno-0-64"></a>   64  sudo nala install -y ca-certificates
+<a id="__codelineno-0-65" name="__codelineno-0-65" href="#__codelineno-0-65"></a>   65  sudo cp Downloads/ssnw-root.pem.crt /usr/local/share/ca-certificates
+<a id="__codelineno-0-66" name="__codelineno-0-66" href="#__codelineno-0-66"></a>   66  sudo update-ca-certificates
+<a id="__codelineno-0-67" name="__codelineno-0-67" href="#__codelineno-0-67"></a>   67  cat ~/7869009790BB9080-2025-03-08.asc 
+<a id="__codelineno-0-68" name="__codelineno-0-68" href="#__codelineno-0-68"></a>   68  sh -c &quot;$(curl -fsLS get.chezmoi.io)&quot; -- init --apply atraides
+<a id="__codelineno-0-69" name="__codelineno-0-69" href="#__codelineno-0-69"></a>   69  sudo nala install curl
+<a id="__codelineno-0-70" name="__codelineno-0-70" href="#__codelineno-0-70"></a>   70  sh -c &quot;$(curl -fsLS get.chezmoi.io)&quot; -- init --apply atraides
+<a id="__codelineno-0-71" name="__codelineno-0-71" href="#__codelineno-0-71"></a>   71  rm -rf ~/.local/share/chezmoi/
+<a id="__codelineno-0-72" name="__codelineno-0-72" href="#__codelineno-0-72"></a>   72  sh -c &quot;$(curl -fsLS get.chezmoi.io)&quot; -- init --apply atraides
+<a id="__codelineno-0-73" name="__codelineno-0-73" href="#__codelineno-0-73"></a>   73  ls -ltra
+<a id="__codelineno-0-74" name="__codelineno-0-74" href="#__codelineno-0-74"></a>   74  sudo nala install zsh
+<a id="__codelineno-0-75" name="__codelineno-0-75" href="#__codelineno-0-75"></a>   75  chsh
+<a id="__codelineno-0-76" name="__codelineno-0-76" href="#__codelineno-0-76"></a>   76  sudo nala install starship
+<a id="__codelineno-0-77" name="__codelineno-0-77" href="#__codelineno-0-77"></a>   77  curl -sS https://starship.rs/install.sh | sh
+<a id="__codelineno-0-78" name="__codelineno-0-78" href="#__codelineno-0-78"></a>   78  zsh
+<a id="__codelineno-0-79" name="__codelineno-0-79" href="#__codelineno-0-79"></a>   79  chezmoi update -rv
+<a id="__codelineno-0-80" name="__codelineno-0-80" href="#__codelineno-0-80"></a>   80  chezmoi update -Rv
+<a id="__codelineno-0-81" name="__codelineno-0-81" href="#__codelineno-0-81"></a>   81  sudo nala install git
+<a id="__codelineno-0-82" name="__codelineno-0-82" href="#__codelineno-0-82"></a>   82  chezmoi update -Rv
+<a id="__codelineno-0-83" name="__codelineno-0-83" href="#__codelineno-0-83"></a>   83  nitch
+<a id="__codelineno-0-84" name="__codelineno-0-84" href="#__codelineno-0-84"></a>   84  cat ~/.zshrc
+<a id="__codelineno-0-85" name="__codelineno-0-85" href="#__codelineno-0-85"></a>   85  k get
+<a id="__codelineno-0-86" name="__codelineno-0-86" href="#__codelineno-0-86"></a>   86  chezmoi edit ~/.zshrc
+<a id="__codelineno-0-87" name="__codelineno-0-87" href="#__codelineno-0-87"></a>   87  which starship
+<a id="__codelineno-0-88" name="__codelineno-0-88" href="#__codelineno-0-88"></a>   88  sudo rm /usr/local/bin/starship 
+<a id="__codelineno-0-89" name="__codelineno-0-89" href="#__codelineno-0-89"></a>   89  zsh
+<a id="__codelineno-0-90" name="__codelineno-0-90" href="#__codelineno-0-90"></a>   90  history
+<a id="__codelineno-0-91" name="__codelineno-0-91" href="#__codelineno-0-91"></a>   91  mkdir develop
+<a id="__codelineno-0-92" name="__codelineno-0-92" href="#__codelineno-0-92"></a>   92  cd develop/
+<a id="__codelineno-0-93" name="__codelineno-0-93" href="#__codelineno-0-93"></a>   93  git clone git@github.com:atraides/homelab.git ssnw-docs
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>   1  chsh
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    2  which zsh
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    3  chsh /usr/bin/zsh
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    4  sudo chsh atraides  /usr/bin/zsh
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    5  sudo chsh atraides
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    6  history
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    7  bash
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>    8  cd ~/.local/share/
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>    9  cd chezmoi
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>   10  ls -ltr
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>   11  cd ..
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>   12  rm -rf chezmoi
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>   13  git clone git@github.com:atraides/dotfiles.git chezmoi
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>   14  ssh-add -L
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>   15  export GPG_TTY=$(tty)\nexport SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)\ngpgconf --launch gpg-agent\ngpg-connect-agent updatestartuptty /bye &gt; /dev/null
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>   16  ssh-add -L
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>   17  git clone git@github.com:atraides/dotfiles.git chezmoi
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>   18  cd
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>   19  chezmoi edit ~/.zshrc
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>   20  vi ~/.gitconfig
+<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>   21  gpg -k
+<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>   22  chezmoi update
+<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>   23  chezmoi edit ~/.zshrc
+<a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>   24  chezmoi update
+<a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a>   25  ssh-add -L
+<a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a>   26  chezmoi add ~/.gnupg/gpg.conf
+<a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a>   27  chezmoi add ~/.gnupg/gpg-agent.conf
+<a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a>   28  gpg -k
+<a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a>   29  sudo nala install install dconf-cli uuid-runtime
+<a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a>   30  sudo nala install dconf-cli uuid-runtime
+<a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a>   31  bash -c &quot;$(wget -qO- https://git.io/vQgMr)&quot;
+<a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a>   32  ls -ltr
+<a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a>   33  clear
+<a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a>   34  gpg -k
+<a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a>   35  export KEYID=7869009790BB9080
+<a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a>   36  gpg --keyserver keys.gnupg.net --send-key $KEYID
+<a id="__codelineno-1-37" name="__codelineno-1-37" href="#__codelineno-1-37"></a>   37  gpg --send-key $KEYID | curl -T - https://keys.openpgp.org
+<a id="__codelineno-1-38" name="__codelineno-1-38" href="#__codelineno-1-38"></a>   38  gpg --card-edit
+<a id="__codelineno-1-39" name="__codelineno-1-39" href="#__codelineno-1-39"></a>   39  sudo cp -avir /media/atraides/20380fc2-0fb8-4511-8076-abcf210e5f31/.password-store ~/
+<a id="__codelineno-1-40" name="__codelineno-1-40" href="#__codelineno-1-40"></a>   40  umount /media/atraides/20380fc2-0fb8-4511-8076-abcf210e5f31 
+<a id="__codelineno-1-41" name="__codelineno-1-41" href="#__codelineno-1-41"></a>   41  pass
+<a id="__codelineno-1-42" name="__codelineno-1-42" href="#__codelineno-1-42"></a>   42  sudo nala install pass
+<a id="__codelineno-1-43" name="__codelineno-1-43" href="#__codelineno-1-43"></a>   43  pass
+<a id="__codelineno-1-44" name="__codelineno-1-44" href="#__codelineno-1-44"></a>   44  pass PGP/Yubikey/Work/Admin\ PIN
+<a id="__codelineno-1-45" name="__codelineno-1-45" href="#__codelineno-1-45"></a>   45  ls -ltr ~/.password-store
+<a id="__codelineno-1-46" name="__codelineno-1-46" href="#__codelineno-1-46"></a>   46  find ~/.password-store/
+<a id="__codelineno-1-47" name="__codelineno-1-47" href="#__codelineno-1-47"></a>   47  find ~/.password-store/ -ls
+<a id="__codelineno-1-48" name="__codelineno-1-48" href="#__codelineno-1-48"></a>   48  pass PGP/YubiKey/Master
+<a id="__codelineno-1-49" name="__codelineno-1-49" href="#__codelineno-1-49"></a>   49  pass PGP/YubiKey/Master/Admin\ PIN
+<a id="__codelineno-1-50" name="__codelineno-1-50" href="#__codelineno-1-50"></a>   50  gpg --card-edit
+<a id="__codelineno-1-51" name="__codelineno-1-51" href="#__codelineno-1-51"></a>   51  clear
+<a id="__codelineno-1-52" name="__codelineno-1-52" href="#__codelineno-1-52"></a>   52  pyenv 
+<a id="__codelineno-1-53" name="__codelineno-1-53" href="#__codelineno-1-53"></a>   53  pyenv list
+<a id="__codelineno-1-54" name="__codelineno-1-54" href="#__codelineno-1-54"></a>   54  pyenv versions
+<a id="__codelineno-1-55" name="__codelineno-1-55" href="#__codelineno-1-55"></a>   55  pyenv install
+<a id="__codelineno-1-56" name="__codelineno-1-56" href="#__codelineno-1-56"></a>   56  pyenv install -l
+<a id="__codelineno-1-57" name="__codelineno-1-57" href="#__codelineno-1-57"></a>   57  pyenv install 3.12.7
+<a id="__codelineno-1-58" name="__codelineno-1-58" href="#__codelineno-1-58"></a>   58  sudo nala install -y make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev python-openssl git
+<a id="__codelineno-1-59" name="__codelineno-1-59" href="#__codelineno-1-59"></a>   59  sudo nala install -y make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev git
+<a id="__codelineno-1-60" name="__codelineno-1-60" href="#__codelineno-1-60"></a>   60  sudo apt purge libncurses5
+<a id="__codelineno-1-61" name="__codelineno-1-61" href="#__codelineno-1-61"></a>   61  pyenv install 3.12.7
+<a id="__codelineno-1-62" name="__codelineno-1-62" href="#__codelineno-1-62"></a>   62  bash
+<a id="__codelineno-1-63" name="__codelineno-1-63" href="#__codelineno-1-63"></a>   63  pyenv global 3.12.7
+<a id="__codelineno-1-64" name="__codelineno-1-64" href="#__codelineno-1-64"></a>   64  sudo nala upgrade
+<a id="__codelineno-1-65" name="__codelineno-1-65" href="#__codelineno-1-65"></a>   65  cd develop/ssnw-docs/docs/guides
+<a id="__codelineno-1-66" name="__codelineno-1-66" href="#__codelineno-1-66"></a>   66  lazygit
+<a id="__codelineno-1-67" name="__codelineno-1-67" href="#__codelineno-1-67"></a>   67  cd
+<a id="__codelineno-1-68" name="__codelineno-1-68" href="#__codelineno-1-68"></a>   68  curl -LO https://github.com/jesseduffield/lazygit/releases/download/v0.48.0/lazygit_0.48.0_Linux_x86_64.tar.gz
+<a id="__codelineno-1-69" name="__codelineno-1-69" href="#__codelineno-1-69"></a>   69  rm lazygit_0.48.0_Linux_arm64.tar.gz
+<a id="__codelineno-1-70" name="__codelineno-1-70" href="#__codelineno-1-70"></a>   70  ls -ltr
+<a id="__codelineno-1-71" name="__codelineno-1-71" href="#__codelineno-1-71"></a>   71  rm README.md LICENSE
+<a id="__codelineno-1-72" name="__codelineno-1-72" href="#__codelineno-1-72"></a>   72  cd bin
+<a id="__codelineno-1-73" name="__codelineno-1-73" href="#__codelineno-1-73"></a>   73  tar -zxvf ../lazygit_0.48.0_Linux_x86_64.tar.gz
+<a id="__codelineno-1-74" name="__codelineno-1-74" href="#__codelineno-1-74"></a>   74  rm LICENSE README.md
+<a id="__codelineno-1-75" name="__codelineno-1-75" href="#__codelineno-1-75"></a>   75  ls -ltr
+<a id="__codelineno-1-76" name="__codelineno-1-76" href="#__codelineno-1-76"></a>   76  cd develop/ssnw-docs/docs/guides
+<a id="__codelineno-1-77" name="__codelineno-1-77" href="#__codelineno-1-77"></a>   77  lazygit
+<a id="__codelineno-1-78" name="__codelineno-1-78" href="#__codelineno-1-78"></a>   78  sudo nala install pipx
+<a id="__codelineno-1-79" name="__codelineno-1-79" href="#__codelineno-1-79"></a>   79  pipx ensurepath
+<a id="__codelineno-1-80" name="__codelineno-1-80" href="#__codelineno-1-80"></a>   80  sudo pipx ensurepath --global # optional to allow pipx actions with --global argument\n
+<a id="__codelineno-1-81" name="__codelineno-1-81" href="#__codelineno-1-81"></a>   81  sudo pipx ensurepath --global
+<a id="__codelineno-1-82" name="__codelineno-1-82" href="#__codelineno-1-82"></a>   82  sudo pipx ensurepath 
+<a id="__codelineno-1-83" name="__codelineno-1-83" href="#__codelineno-1-83"></a>   83  pipx ensurepath 
+<a id="__codelineno-1-84" name="__codelineno-1-84" href="#__codelineno-1-84"></a>   84  pipx install commitizen
+<a id="__codelineno-1-85" name="__codelineno-1-85" href="#__codelineno-1-85"></a>   85  cd develop/ssnw-docs/docs/
+<a id="__codelineno-1-86" name="__codelineno-1-86" href="#__codelineno-1-86"></a>   86  cd ..
+<a id="__codelineno-1-87" name="__codelineno-1-87" href="#__codelineno-1-87"></a>   87  vi .github/workflows/gh-pages.yml
+<a id="__codelineno-1-88" name="__codelineno-1-88" href="#__codelineno-1-88"></a>   88  cz
+<a id="__codelineno-1-89" name="__codelineno-1-89" href="#__codelineno-1-89"></a>   89  cz init
+<a id="__codelineno-1-90" name="__codelineno-1-90" href="#__codelineno-1-90"></a>   90  cz
+<a id="__codelineno-1-91" name="__codelineno-1-91" href="#__codelineno-1-91"></a>   91  cz c
+<a id="__codelineno-1-92" name="__codelineno-1-92" href="#__codelineno-1-92"></a>   92  ga
+<a id="__codelineno-1-93" name="__codelineno-1-93" href="#__codelineno-1-93"></a>   93  gaa
+<a id="__codelineno-1-94" name="__codelineno-1-94" href="#__codelineno-1-94"></a>   94  cz
+<a id="__codelineno-1-95" name="__codelineno-1-95" href="#__codelineno-1-95"></a>   95  cz c
+<a id="__codelineno-1-96" name="__codelineno-1-96" href="#__codelineno-1-96"></a>   96  cz bump
+<a id="__codelineno-1-97" name="__codelineno-1-97" href="#__codelineno-1-97"></a>   97  cz push
+<a id="__codelineno-1-98" name="__codelineno-1-98" href="#__codelineno-1-98"></a>   98  gpsup
+</code></pre></div>
+
+
+
+
+
+
+
+  
+    
+  
+  
+    
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="March 9, 2025 06:57:29"><span class="timeago" datetime="2025-03-09T06:57:29+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="March 9, 2025 06:57:29">2025-03-09</span>
+  </span>
+
+    
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Created">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-timeago" title="March 9, 2025 06:57:29"><span class="timeago" datetime="2025-03-09T06:57:29+00:00" locale="en"></span></span><span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-iso_date" title="March 9, 2025 06:57:29">2025-03-09</span>
+  </span>
+
+    
+    
+      
+  
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Contributors">
+      
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 4a4 4 0 0 1 4 4 4 4 0 0 1-4 4 4 4 0 0 1-4-4 4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4"/></svg>
+      
+    </span>
+    <nav>
+      
+        <a href="mailto:daniel@hagyarossy.hu">Dániel Hagyárossy</a>
+    </nav>
+  </span>
+
+    
+    
+      
+  <span class="md-source-file__fact">
+    
+      
+  <span class="md-icon" title="Contributors">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2"/></svg>
+  </span>
+  <span>GitHub</span>
+
+    
+    <nav>
+      
+        <a href="https://github.com/atraides" class="md-author" title="@atraides">
+          
+          <img src="https://avatars.githubusercontent.com/u/510412?v=4&size=72" alt="atraides">
+        </a>
+      
+      
+      
+    </nav>
+  </span>
+
+    
+  </aside>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2022 - 2023 Daniel Hagyarossy
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["header.autohide", "content.code.copy", "content.action.edit", "navigation.indexes", "navigation.sections", "navigation.top", "search.highlight", "search.share"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+        <script src="../../js/timeago.min.js"></script>
+      
+        <script src="../../js/timeago_mkdocs_material.js"></script>
+      
+        <script src="/assets/js/asciinema-player.min.js"></script>
+      
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>

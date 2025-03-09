@@ -1,5 +1,11 @@
 # Changelog
 
+## v0.3.3 (2025-03-09)
+
+### Fix
+
+- **run**: Add python venv name to run the install locally
+
 ## v0.3.2 (2025-03-09)
 
 ### Fix

@@ -1,26 +1,24 @@
-name: Release
+name: Create release
+
 on:
   push:
-    branches:
-      - master
-      - main
+    tags:
+      - v*
+
+permissions:
+  contents: write
+
 jobs:
   release:
-    name: Release
-    runs-on: ubuntu-latest
+    name: Release pushed tag
+    runs-on: ubuntu-22.04
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-          persist-credentials: false
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: "lts/*"
-      - name: Install dependencies
-        run: npm ci
-      - name: Release
+      - name: Create release
         env:
-          GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
-        run: npx semantic-release
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          tag: ${{ github.ref_name }}
+        run: |
+          gh release create "$tag" \
+              --repo="$GITHUB_REPOSITORY" \
+              --title="${GITHUB_REPOSITORY#*/} ${tag#v}" \
+              --generate-notes

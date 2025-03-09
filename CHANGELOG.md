@@ -1,5 +1,11 @@
 # Changelog
 
+## v0.1.5 (2025-03-09)
+
+### Fix
+
+- **docs**: Remove line numbers from history
+
 ## v0.1.4 (2025-03-09)
 
 ### Fix

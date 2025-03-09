@@ -6,11 +6,11 @@ repo_url: https://github.com/atraides/homelab
 repo_name: atraides/homelab
 
 extra_css:
-  - /assets/css/asciinema-player.css
+#  - /assets/css/asciinema-player.css
   - /assets/css/extra.css
 
-extra_javascript:
-  - /assets/js/asciinema-player.min.js
+#extra_javascript:
+#  - /assets/js/asciinema-player.min.js
 
 plugins:
   - glightbox:

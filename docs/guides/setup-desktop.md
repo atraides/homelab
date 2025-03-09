@@ -3,26 +3,7 @@
 ```
     1  sudo apt install nala
     2  sudo nala upgrade
-    3  cd $GNUPGHOME
-    4  cd $GNUPGHOME
-    5  wget https://raw.githubusercontent.com/drduh/config/master/gpg.conf
-    6  pwd
-    7  rm gpg.conf 
-    8  echo $GNUPGHOME
-    9  gpg
-   10  gpg -k
-   11  echo $GNUPGHOME
-   12  mkdir ~/.gnupg
-   13  cd ~/.gnupg/
-   14  wget https://raw.githubusercontent.com/drduh/config/master/gpg.conf
-   15  grep -ve "^#" $GNUPGHOME/gpg.conf
-   16  export GNUPGHOME=~/.gnupg/
-   17  grep -ve "^#" $GNUPGHOME/gpg.conf
    18  gpg --import /media/atraides/20380fc2-0fb8-4511-8076-abcf210e5f31/*.asc
-   19  gpg -K
-   20  gpg -k
-   21  gpg --delete-keys F8AFF395491002AD C145CF402E7AD349 AF294F634C704603
-   22  gpg -k
    23  export KEYID=7869009790BB9080
    24  gpg --command-fd=0 --pinentry-mode=loopback --edit-key "$KEYID" <<EOF
    25  uid *

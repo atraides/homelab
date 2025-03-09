@@ -1,5 +1,11 @@
 # Changelog
 
+## v0.3.1 (2025-03-09)
+
+### Fix
+
+- **docs**: Allow the correct version to be linked in the README
+
 ## v0.3.0 (2025-03-09)
 
 ### Fix

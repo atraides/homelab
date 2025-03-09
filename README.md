@@ -21,7 +21,7 @@ This project was created to automate provisioning, operating and updating self-h
 
 [github-build]: https://github.com/atraides/homelab/actions/workflows/gh-pages.yml
 [github-repo]: https://github.com/atraides/homelab
-[github-release]: https://github.com/atraides/homelab/releases/tag/v0.3.0
+[github-release]: https://github.com/atraides/homelab/releases/tag/v0.3.1
 [webpage-cz-cli]: https://commitizen.github.io/cz-cli/
 [webpage-license]: https://choosealicense.com/licenses/gpl-3.0/
 [webpage-sapstar]: https://docs.sapstar.eu

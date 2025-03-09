@@ -1,24 +1,40 @@
-name: Create release
+name: Bump version
 
 on:
   push:
-    tags:
-      - v*
-
-permissions:
-  contents: write
+    branches:
+      - master
+      - main
 
 jobs:
-  release:
-    name: Release pushed tag
-    runs-on: ubuntu-22.04
+  bump-version:
+    if: "!startsWith(github.event.head_commit.message, 'bump:')"
+    runs-on: ubuntu-latest
+    name: "Bump version and create changelog with commitizen"
     steps:
-      - name: Create release
+      - name: Check out
+        uses: actions/checkout@v4
+        with:
+          token: "${{ secrets.RELEASE_TOKEN }}"
+          fetch-depth: 0
+      - name: Create bump and changelog
+        uses: commitizen-tools/commitizen-action@master
+        with:
+          github_token: ${{ secrets.RELEASE_TOKEN }}
+          changelog_increment_filename: release.md
+  release-version:
+    runs-on: ubuntu-latest
+    name: "Bump version and create changelog with commitizen"
+    steps:
+      - name: Check out
+        uses: actions/checkout@v4
+        with:
+          token: "${{ secrets.RELEASE_TOKEN }}"
+          fetch-depth: 0
+       - name: Release
+        uses: softprops/action-gh-release@v2
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          body_path: "release.md"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          tag: ${{ github.ref_name }}
-        run: |
-          gh release create "$tag" \
-              --repo="$GITHUB_REPOSITORY" \
-              --title="${GITHUB_REPOSITORY#*/} ${tag#v}" \
-              --generate-notes

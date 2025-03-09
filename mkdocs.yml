@@ -139,6 +139,8 @@ nav:
   #   - concepts/tools-container.md
   #   - concepts/testing.md
   - Guides:
+      - guides/setup-desktop.md
+      - guides/setup-mainsail.md
       - guides/semantic-release.md
     # - Troubleshooting:
     #   - how-to-guides/troubleshooting/index.md

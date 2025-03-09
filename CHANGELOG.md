@@ -1,18 +1,5 @@
 # Changelog
 
-## v0.2.0 (2025-03-09)
-
-### Fix
-
-- **docs**: Remove line numbers from history
-- **core**: Remove old tags from the changelog
-- **release**: 0.1.6 [skip ci]
-- **docs**: Remove some unnecessary commands from the history
-- **release**: 0.1.5 [skip ci]
-- **docs**: Add links to the two new documentation
-- **release**: 0.1.4 [skip ci]
-- **guide**: Add new guide for the Mainsail setup on raspberry
-
 ## v0.1.3 (2023-07-19)
 
 ### Fix
